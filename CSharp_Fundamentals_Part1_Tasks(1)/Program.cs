@@ -47,7 +47,28 @@
                 Console.WriteLine("_____________________________________");
             }
             ///////////////////////////////////////////////////////
-            
+            //Task4 - Voting Eligibility
+
+            Console.WriteLine(" Enter you age:  ");
+            int age = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(" Do you hold a valid national ID (yes/no)?  ");
+            string ID = Console.ReadLine();
+
+            bool HasValidID = ID == "yes";
+            if (HasValidID && age >= 18)
+            {
+                Console.WriteLine("You are eligible to vote");
+            }
+            else
+            {
+                Console.WriteLine("You are not eligible to vote");
+                Console.WriteLine("_____________________________________");
+
+            }
+
+            ///////////////////////////////////////////////////////
+
 
 
 
