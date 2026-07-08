@@ -31,6 +31,25 @@
             Console.WriteLine("_____________________________________");
 
             ///////////////////////////////////////////////////////
+            
+            //Task3 - Even or Odd Number Checker
+
+            Console.WriteLine(" Enter a whole number:  ");
+            int WholeNum = int.Parse(Console.ReadLine());
+
+            if (WholeNum % 2 == 0)
+            {
+                Console.WriteLine("The number is even.");
+            }
+            else
+            {
+                Console.WriteLine("The number is odd.");
+                Console.WriteLine("_____________________________________");
+            }
+            ///////////////////////////////////////////////////////
+            
+
+
 
 
         }
