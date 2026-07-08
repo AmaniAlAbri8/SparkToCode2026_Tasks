@@ -4,7 +4,18 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            //Task 1 - Personal Info Card
+
+            string Name = "Sara";
+            int Age = 21;
+            double HeightInMeters = 1.65;
+            bool Student = true;
+
+            Console.WriteLine("Name: " + Name + ", Age: " + Age + ", Hieght: " + HeightInMeters + ", Students: " + Student);
+            Console.WriteLine("_____________________________________");
+
+            ///////////////////////////////////////////////////////
+
         }
     }
 }
