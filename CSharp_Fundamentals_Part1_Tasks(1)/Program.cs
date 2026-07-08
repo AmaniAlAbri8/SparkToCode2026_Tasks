@@ -16,6 +16,23 @@
 
             ///////////////////////////////////////////////////////
 
+            //Task2 - Rectangule Calculator
+
+            Console.WriteLine(" Enter the length:  ");
+            float length = float.Parse(Console.ReadLine());
+
+            Console.WriteLine(" Enter the Width:  ");
+            float width = float.Parse(Console.ReadLine());
+
+            float Area = length * width;
+            float Perimeter = 2 * (length + width);
+
+            Console.WriteLine("Area: " + Area + ", Perimeter: " + Perimeter);
+            Console.WriteLine("_____________________________________");
+
+            ///////////////////////////////////////////////////////
+
+
         }
     }
 }
