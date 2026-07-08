@@ -123,6 +123,31 @@
 
 
             ///////////////////////////////////////////////////////
+            
+            //Task7 - Movie Ticket Pricing 
+
+            Console.WriteLine("Enter your age: ");
+            int TicketAge = int.Parse(Console.ReadLine());
+
+            if (TicketAge >= 0 && TicketAge <= 12)
+            {
+                Console.WriteLine("Category name: Children");
+                Console.WriteLine("Ticket Price: 2.000 OMR");
+            }
+            else if (TicketAge >= 13 && TicketAge <= 59)
+            {
+                Console.WriteLine("Category name: Adults ");
+                Console.WriteLine("Ticket Price: 5.000 OMR");
+            }
+            else
+            {
+                Console.WriteLine("Category name: Senior ");
+                Console.WriteLine("Ticket Price: 3.000 OMR");
+            }
+            Console.WriteLine("_____________________________________");
+
+            ///////////////////////////////////////////////////////
+
 
 
 
