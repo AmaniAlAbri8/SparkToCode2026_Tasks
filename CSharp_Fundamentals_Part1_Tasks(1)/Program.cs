@@ -98,6 +98,31 @@
             Console.WriteLine("_____________________________________");
 
             ///////////////////////////////////////////////////////
+            
+            //Task6 - Temperature Converter
+
+            Console.WriteLine("Enter a temperature in Celsius: ");
+            float Celsius = float.Parse(Console.ReadLine());
+
+            float F = (Celsius * 9 / 5) + 32;
+            Console.WriteLine("Converted Fahrnheit value is: " + F);
+
+            if (F < 10)
+            {
+                Console.WriteLine("weather classification is: Cold");
+            }
+            else if (F <= 30)
+            {
+                Console.WriteLine("weather classification is: Mild");
+            }
+            else
+            {
+                Console.WriteLine("weather classification is: Hot");
+            }
+            Console.WriteLine("_____________________________________");
+
+
+            ///////////////////////////////////////////////////////
 
 
 
