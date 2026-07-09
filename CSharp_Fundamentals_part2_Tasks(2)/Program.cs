@@ -73,8 +73,45 @@
                     Console.WriteLine("Incorrect password, try again");
                 }
             }
-            
+
             ///////////////////////////////////////////////////////
+
+            //Task5 - Number Guessing Game
+
+            Console.Write("Guess the secret number: ");
+
+            int secretNumber = 42;
+            int guess;
+            int attempts = 0;
+            bool correctGuess = false;
+
+            do
+            {
+                guess = int.Parse(Console.ReadLine());
+                attempts++;
+
+                if (guess > secretNumber)
+                {
+                    Console.WriteLine("Too high");
+                }
+                else if (guess < secretNumber)
+                {
+                    Console.WriteLine("Too low");
+                }
+                else
+                {
+                    Console.WriteLine("Correct!");
+                    correctGuess = true;
+                }
+
+            } while (correctGuess == false);
+
+            Console.WriteLine("Attempts: " + attempts);
+
+            Console.WriteLine("_____________________________________");
+
+            ///////////////////////////////////////////////////////
+
 
 
 
