@@ -4,7 +4,21 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            //Task 1 - Countdown Timer
+
+            Console.WriteLine("Enter a starting number: ");
+            int startingNumber = int.Parse(Console.ReadLine());
+
+            for (int counter = startingNumber; counter >= 1; counter--)
+            {
+                Console.WriteLine(counter);
+            }
+            Console.WriteLine("Liftoff!");
+
+            Console.WriteLine("_____________________________________");
+
+            ///////////////////////////////////////////////////////
+
         }
     }
 }
