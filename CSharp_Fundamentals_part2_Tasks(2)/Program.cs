@@ -19,6 +19,24 @@
 
             ///////////////////////////////////////////////////////
 
+            //Task2 - Sum of Numbers 1 to N
+
+            Console.WriteLine("Enter a positive whole number: ");
+            int N = int.Parse(Console.ReadLine());
+
+            int sum = 0;
+
+            for (int counter = 1; counter <= N; counter++)
+            {
+                sum = sum + counter;
+            }
+
+            Console.WriteLine("The sum is: " + sum);
+
+            Console.WriteLine("_____________________________________");
+
+
+
         }
     }
 }
