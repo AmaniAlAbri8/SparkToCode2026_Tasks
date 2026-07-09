@@ -52,6 +52,31 @@
 
             ///////////////////////////////////////////////////////
 
+            //Task4 - Password Retry
+
+            string password = "Spark2026";
+            bool Exit = false;
+            string input;
+
+            while (Exit == false)
+            {
+                Console.Write("Enter password: ");
+                input = Console.ReadLine();
+
+                if (input == password)
+                {
+                    Console.WriteLine("Access Granted");
+                    Exit = true;
+                }
+               else
+                {
+                    Console.WriteLine("Incorrect password, try again");
+                }
+            }
+            
+            ///////////////////////////////////////////////////////
+
+
 
 
         }
