@@ -182,10 +182,24 @@
 
             Console.WriteLine("_____________________________________");
 
+           ///////////////////////////////////////////////////////
 
+            //Task8 - Sum of Even Numbers Only
 
+            Console.Write("Enter a positive whole number: ");
+            int n = int.Parse(Console.ReadLine());
 
+            int TheSum = 0;
 
+            for (int counter = 1; counter <= n; counter++)
+            {
+                if (counter % 2 == 0)
+                {
+                    TheSum = TheSum + counter;
+                }
+            }
+
+            Console.WriteLine("The sum of even numbers is: " + TheSum);
 
         }
     }
