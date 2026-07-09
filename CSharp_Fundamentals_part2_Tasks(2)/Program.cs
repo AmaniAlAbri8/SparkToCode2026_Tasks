@@ -73,6 +73,7 @@
                     Console.WriteLine("Incorrect password, try again");
                 }
             }
+            Console.WriteLine("_____________________________________");
 
             ///////////////////////////////////////////////////////
 
@@ -107,6 +108,33 @@
             } while (correctGuess == false);
 
             Console.WriteLine("Attempts: " + attempts);
+
+            Console.WriteLine("_____________________________________");
+
+            ///////////////////////////////////////////////////////
+
+            //Task6 - Safe Division Calculator
+
+            try
+            {
+                Console.Write("Enter first number: ");
+                int num1 = int.Parse(Console.ReadLine());
+
+                Console.Write("Enter second number: ");
+                int num2 = int.Parse(Console.ReadLine());
+
+                int result = num1 / num2;
+
+                Console.WriteLine("Result: " + result);
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("You cannot divide by zero.");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Please enter valid numbers.");
+            }
 
             Console.WriteLine("_____________________________________");
 
