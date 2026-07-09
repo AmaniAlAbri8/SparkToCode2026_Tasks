@@ -140,6 +140,49 @@
 
             ///////////////////////////////////////////////////////
 
+            //Task7 - Repeating Menu with Exit Option
+
+            bool exit = false;
+
+            while (exit == false)
+            {
+                Console.WriteLine("1. Say Hello");
+                Console.WriteLine("2. Show Greeting");
+                Console.WriteLine("3. Exit");
+
+                try
+                {
+                    Console.Write("Choose an option: ");
+                    int choice = int.Parse(Console.ReadLine());
+
+                    switch (choice)
+                    {
+                        case 1:
+                            Console.WriteLine("Hello!");
+                            break;
+
+                        case 2:
+                            Console.WriteLine("Good Day!");
+                            break;
+
+                        case 3:
+                            exit = true;
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid choice.");
+                            break;
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Please enter a number.");
+                }
+            }
+
+            Console.WriteLine("_____________________________________");
+
+
 
 
 
