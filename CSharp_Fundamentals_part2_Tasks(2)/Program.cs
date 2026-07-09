@@ -36,6 +36,23 @@
             Console.WriteLine("_____________________________________");
 
 
+            ///////////////////////////////////////////////////////
+
+            //Task3 - Multiplication Table
+
+            Console.Write("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+
+            for (int counter = 1; counter <= 10; counter++)
+            {
+                Console.WriteLine(number + " x " + counter + " = " + (number * counter));
+            }
+
+            Console.WriteLine("_____________________________________");
+
+            ///////////////////////////////////////////////////////
+
+
 
         }
     }
