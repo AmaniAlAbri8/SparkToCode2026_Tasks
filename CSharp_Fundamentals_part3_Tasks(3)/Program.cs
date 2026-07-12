@@ -49,6 +49,22 @@
 
             ///////////////////////////////////////////////////////
 
+            //Task4 - Subscription End Date
+
+            Console.Write("Enter the number of a free trial days: ");
+            int days = int.Parse(Console.ReadLine());
+
+            DateTime endDate = DateTime.Today.AddDays(days);
+
+            Console.WriteLine("End Date: " + endDate.ToString("yyyy-MM-dd"));
+            Console.WriteLine("_____________________________________");
+
+
+            ///////////////////////////////////////////////////////
+
+
+
+
 
         }
     }
