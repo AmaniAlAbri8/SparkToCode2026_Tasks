@@ -68,6 +68,14 @@
                 return "F";
             }
         }
+        // Task 8 - Countdown Function
+        static void Countdown(int start)
+        {
+            for (int counter = start; counter >= 1; counter--)
+            {
+                Console.WriteLine(counter);
+            }
+        }
 
         /////////////////////    Main     ///////////////////////////
         static void Main(string[] args)
@@ -144,6 +152,12 @@
             Console.WriteLine("Grade = " + grade);
 
             Console.WriteLine();
+
+            // Task 8
+            Console.Write("Enter the starting number: ");
+            int start = int.Parse(Console.ReadLine());
+
+            Countdown(start);
 
         }
     }
