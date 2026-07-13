@@ -44,6 +44,30 @@
         {
             return 2 * (length + width);
         }
+        // Task 7 - Grade Letter Function
+        static string GetGradeLetter(int score)
+        {
+            if (score >= 90)
+            {
+                return "A";
+            }
+            else if (score >= 80)
+            {
+                return "B";
+            }
+            else if (score >= 70)
+            {
+                return "C";
+            }
+            else if (score >= 60)
+            {
+                return "D";
+            }
+            else
+            {
+                return "F";
+            }
+        }
 
         /////////////////////    Main     ///////////////////////////
         static void Main(string[] args)
@@ -97,7 +121,6 @@
             Console.WriteLine();
 
             // Task 6
-
             Console.Write("Enter length: ");
             double length = double.Parse(Console.ReadLine());
 
@@ -109,6 +132,16 @@
 
             Console.WriteLine("Area = " + area);
             Console.WriteLine("Perimeter = " + perimeter);
+
+            Console.WriteLine();
+
+            // Task 7
+            Console.Write("Enter your score: ");
+            int score = int.Parse(Console.ReadLine());
+
+            string grade = GetGradeLetter(score);
+
+            Console.WriteLine("Grade = " + grade);
 
             Console.WriteLine();
 
