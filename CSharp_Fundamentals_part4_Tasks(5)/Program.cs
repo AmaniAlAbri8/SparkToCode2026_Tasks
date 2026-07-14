@@ -72,7 +72,35 @@ namespace CSharp_Fundamentals_part5_Tasks_5_
 
             Console.WriteLine("Current Page:");
             Console.WriteLine(browserHistory.Peek());
+            Console.WriteLine("_____________________________________");
 
+            ///////////////////////////////////////////////////////////
+
+            //Task 4- Customer Service Queue
+            Queue<string> customers = new Queue<string>();
+
+            int CustomerCounter;
+
+            for (CustomerCounter = 0; CustomerCounter < 3; CustomerCounter++)
+            {
+                Console.WriteLine("Enter customer name:");
+                customers.Enqueue(Console.ReadLine());
+            }
+
+            string servedCustomer = customers.Dequeue();
+
+            Console.WriteLine("Customer Served:");
+            Console.WriteLine(servedCustomer);
+
+            Console.WriteLine("Remaining Customers:");
+
+            foreach (string customer in customers)
+            {
+                Console.WriteLine(customer);
+            }
+            Console.WriteLine("_____________________________________");
+
+            ///////////////////////////////////////////////////////////
         }
     }
 }
