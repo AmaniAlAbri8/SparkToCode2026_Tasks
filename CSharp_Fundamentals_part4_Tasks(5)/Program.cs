@@ -191,6 +191,45 @@ namespace CSharp_Fundamentals_part5_Tasks_5_
             Console.WriteLine("1st Place: " + scores[0]);
             Console.WriteLine("2nd Place: " + scores[1]);
             Console.WriteLine("3rd Place: " + scores[2]);
+            Console.WriteLine("_____________________________________");
+
+            ///////////////////////////////////////////////////////////
+
+            //Task 8 - Undo Last Action
+
+            Stack<string> actions = new Stack<string>();
+
+            bool stop = false;
+            string action;
+
+            while (stop == false)
+            {
+                Console.Write("Enter action (type stop to finish): ");
+                action = Console.ReadLine();
+
+                if (action == "stop")
+                {
+                    stop = true;
+                }
+                else
+                {
+                    actions.Push(action);
+                }
+            }
+
+            Console.WriteLine("Undo:");
+            Console.WriteLine(actions.Pop());
+
+            Console.WriteLine("Undo:");
+            Console.WriteLine(actions.Pop());
+
+            Console.WriteLine("Remaining Actions:");
+
+            foreach (string remainingAction in actions)
+            {
+                Console.WriteLine(remainingAction);
+            }
+
         }
     }
 }
