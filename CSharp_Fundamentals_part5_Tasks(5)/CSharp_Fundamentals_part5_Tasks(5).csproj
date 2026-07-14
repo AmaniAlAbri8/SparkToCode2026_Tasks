@@ -8,8 +8,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="C:\Users\RedRo\Desktop\Spark_To_Code2026\SparkToCode2026_Tasks\CSharp_Fundamentals_part5_Tasks%285%29\Program.cs" Link="Program.cs" />
-  </ItemGroup>
-
 </Project>
