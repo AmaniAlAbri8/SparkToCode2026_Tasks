@@ -170,6 +170,27 @@ namespace CSharp_Fundamentals_part5_Tasks_5_
             {
                 Console.WriteLine(product);
             }
+            Console.WriteLine("_____________________________________");
+
+            ///////////////////////////////////////////////////////////
+
+            //Task 7 - High Score Podium
+
+            List<int> scores = new List<int>();
+            int ScoreCounter;
+
+            for (ScoreCounter = 0; ScoreCounter < 5; ScoreCounter++)
+            {
+                Console.WriteLine("Enter score:");
+                scores.Add(int.Parse(Console.ReadLine()));
+            }
+
+            scores.Sort();
+            scores.Reverse();
+
+            Console.WriteLine("1st Place: " + scores[0]);
+            Console.WriteLine("2nd Place: " + scores[1]);
+            Console.WriteLine("3rd Place: " + scores[2]);
         }
     }
 }
