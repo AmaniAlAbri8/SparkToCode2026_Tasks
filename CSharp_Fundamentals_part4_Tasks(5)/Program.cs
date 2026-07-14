@@ -101,6 +101,32 @@ namespace CSharp_Fundamentals_part5_Tasks_5_
             Console.WriteLine("_____________________________________");
 
             ///////////////////////////////////////////////////////////
+
+            //Task 5- Array Grade Range
+
+            int[] grades2 = new int[5];
+            int total = 0;
+            int counterr;
+
+            for (counterr = 0; counterr < grades2.Length; counterr++)
+            {
+                Console.WriteLine("Enter grade:");
+                grades2[counterr] = int.Parse(Console.ReadLine());
+            }
+
+            Array.Sort(grades2);
+
+            for (counterr = 0; counterr < grades2.Length; counterr++)
+            {
+                total = total + grades2[counterr];
+            }
+
+            double average = (double)total / grades2.Length;
+
+            Console.WriteLine("Lowest Grade: " + grades2[0]);
+            Console.WriteLine("Highest Grade: " + grades2[grades2.Length - 1]);
+            Console.WriteLine("Average Grade: " + average);
+
         }
     }
 }
