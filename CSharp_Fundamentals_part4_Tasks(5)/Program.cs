@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics.Metrics;
+using System.Reflection;
 
 namespace CSharp_Fundamentals_part5_Tasks_5_
 {
@@ -52,6 +53,25 @@ namespace CSharp_Fundamentals_part5_Tasks_5_
             Console.WriteLine("_____________________________________");
 
             ///////////////////////////////////////////////////////////
+
+            //Task 3 - Browsing History Stack
+
+            Stack<string> browserHistory = new Stack<string>();
+            int webcounter;
+
+            for (webcounter = 0; webcounter < 3; webcounter++)
+            {
+                Console.WriteLine("Enter website:");
+                browserHistory.Push(Console.ReadLine());
+            }
+
+            string removedPage = browserHistory.Pop();
+
+            Console.WriteLine("Back Button Pressed");
+            Console.WriteLine("Removed Page: " + removedPage);
+
+            Console.WriteLine("Current Page:");
+            Console.WriteLine(browserHistory.Peek());
 
         }
     }
