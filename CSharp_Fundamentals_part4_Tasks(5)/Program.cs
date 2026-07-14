@@ -1,4 +1,6 @@
-﻿namespace CSharp_Fundamentals_part5_Tasks_5_
+﻿using System.Diagnostics.Metrics;
+
+namespace CSharp_Fundamentals_part5_Tasks_5_
 {
     internal class Program
     {
@@ -25,7 +27,32 @@
             Console.WriteLine("_____________________________________");
 
             ///////////////////////////////////////////////////////////
-            
+
+            //Task 2 - Dynamic To-Do List
+
+            List<string> toDoList = new List<string>();
+
+            int Count;
+
+            for (Count = 0; Count < 5; Count++)
+            {
+                Console.WriteLine("Enter task:");
+                toDoList.Add(Console.ReadLine());
+            }
+
+            Console.WriteLine("To-Do List:");
+
+            Count = 1;
+
+            foreach (string task in toDoList)
+            {
+                Console.WriteLine(Count + ". " + task);
+                Count++;
+            }
+            Console.WriteLine("_____________________________________");
+
+            ///////////////////////////////////////////////////////////
+
         }
     }
 }
