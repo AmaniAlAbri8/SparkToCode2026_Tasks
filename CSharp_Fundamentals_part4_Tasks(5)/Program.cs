@@ -126,7 +126,50 @@ namespace CSharp_Fundamentals_part5_Tasks_5_
             Console.WriteLine("Lowest Grade: " + grades2[0]);
             Console.WriteLine("Highest Grade: " + grades2[grades2.Length - 1]);
             Console.WriteLine("Average Grade: " + average);
+            Console.WriteLine("_____________________________________");
 
+            ///////////////////////////////////////////////////////////
+
+            //Task 6- Filtered Shopping List
+
+            List<string> shoppingList = new List<string>();
+
+            bool done = false;
+            string item;
+
+            while (done == false)
+            {
+                Console.Write("Enter shopping item (type done to stop): ");
+                item = Console.ReadLine();
+
+                if (item == "done")
+                {
+                    done = true;
+                }
+                else
+                {
+                    shoppingList.Add(item);
+                }
+            }
+
+            Console.WriteLine("Shopping List:");
+
+            foreach (string product in shoppingList)
+            {
+                Console.WriteLine(product);
+            }
+
+            Console.Write("Enter item to remove: ");
+            string removeItem = Console.ReadLine();
+
+            shoppingList.Remove(removeItem);
+
+            Console.WriteLine("Shopping List After Removal:");
+
+            foreach (string product in shoppingList)
+            {
+                Console.WriteLine(product);
+            }
         }
     }
 }
