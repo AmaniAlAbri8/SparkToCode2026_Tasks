@@ -291,6 +291,27 @@ namespace Banking_System_App
             Console.WriteLine("Receiver Balance: " + balances[receiverIndex]);
         }
 
+        // Service 6 - List All Accounts (Custom Service)
+        static void ListAllAccounts()
+        {
+            if (customerNames.Count == 0)
+            {
+                Console.WriteLine("No accounts available.");
+                return;
+            }
+
+            Console.WriteLine("\nAll Accounts");
+
+            for (int i = 0; i < customerNames.Count; i++)
+            {
+                Console.WriteLine("------------------------");
+                Console.WriteLine("Name: " + customerNames[i]);
+                Console.WriteLine("Account: " + accountNumbers[i]);
+                Console.WriteLine("Balance: " + balances[i]);
+            }
+        }
+
+       
     }
 }
 
