@@ -238,7 +238,59 @@ namespace Banking_System_App
             Console.WriteLine("Balance: " + balances[index]);
         }
 
-     
+        // Service 5 - Transfer Amount
+        static void TransferAmount()
+        {
+            Console.Write("Enter sender account number: ");
+            string sender = Console.ReadLine();
+
+            Console.Write("Enter receiver account number: ");
+            string receiver = Console.ReadLine();
+
+            int senderIndex = accountNumbers.IndexOf(sender);
+            int receiverIndex = accountNumbers.IndexOf(receiver);
+
+            if (senderIndex == -1 || receiverIndex == -1)
+            {
+                Console.WriteLine("One or both accounts not found.");
+                return;
+            }
+
+            Console.Write("Enter transfer amount: ");
+
+            double amount;
+
+            try
+            {
+                amount = double.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Invalid amount.");
+                return;
+            }
+
+            if (amount <= 0)
+            {
+                Console.WriteLine("Amount must be positive.");
+                return;
+            }
+
+            if (amount > balances[senderIndex])
+            {
+                Console.WriteLine("Insufficient balance.");
+                return;
+            }
+
+            balances[senderIndex] -= amount;
+            balances[receiverIndex] += amount;
+
+            Console.WriteLine("Transfer successful.");
+
+            Console.WriteLine("Sender Balance: " + balances[senderIndex]);
+            Console.WriteLine("Receiver Balance: " + balances[receiverIndex]);
+        }
+
     }
 }
 
