@@ -83,5 +83,57 @@ namespace Banking_System_App
                 }
             }
         }
+        // ===================== SERVICE FUNCTIONS =====================
+        // Each function owns ONE service end-to-end: it asks the user for
+        // whatever it needs, validates it, updates the shared lists, and
+        // prints the outcome. Main never reads input or prints results
+        // for these services - it only shows the menu and calls them.
 
-       
+        // Service 1 - Add New Account
+        static void AddAccount()
+        {
+            Console.Write("Enter customer name: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Enter account number: ");
+            string account = Console.ReadLine();
+
+            if (accountNumbers.Contains(account))
+            {
+                Console.WriteLine("Account number already exists.");
+                return;
+            }
+
+            Console.Write("Enter initial deposit: ");
+
+            double amount;
+
+            try
+            {
+                amount = double.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Invalid amount.");
+                return;
+            }
+
+            if (amount < 0)
+            {
+                Console.WriteLine("Deposit cannot be negative.");
+                return;
+            }
+
+            customerNames.Add(name);
+            accountNumbers.Add(account);
+            balances.Add(amount);
+
+            Console.WriteLine("Account created successfully.");
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Account: " + account);
+            Console.WriteLine("Balance: " + amount);
+        }
+        
+    }
+}
+
