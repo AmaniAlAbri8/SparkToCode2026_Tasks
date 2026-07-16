@@ -311,7 +311,29 @@ namespace Banking_System_App
             }
         }
 
-       
+        // Service 7 - Search Customer (Custom Service)
+        static void SearchCustomer()
+        {
+            Console.Write("Enter customer name: ");
+            string name = Console.ReadLine();
+
+            bool found = false;
+
+            for (int i = 0; i < customerNames.Count; i++)
+            {
+                if (customerNames[i].ToLower() == name.ToLower())
+                {
+                    Console.WriteLine("Account Number: " + accountNumbers[i]);
+                    Console.WriteLine("Balance: " + balances[i]);
+                    found = true;
+                }
+            }
+
+            if (!found)
+            {
+                Console.WriteLine("Customer not found.");
+            }
+        }
     }
 }
 
