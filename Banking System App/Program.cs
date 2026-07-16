@@ -219,7 +219,26 @@ namespace Banking_System_App
             Console.WriteLine("New Balance: " + balances[index]);
         }
 
-       
+        // Service 4 - Show Balance
+        static void ShowBalance()
+        {
+            Console.Write("Enter account number: ");
+            string account = Console.ReadLine();
+
+            int index = accountNumbers.IndexOf(account);
+
+            if (index == -1)
+            {
+                Console.WriteLine("Account not found.");
+                return;
+            }
+
+            Console.WriteLine("Customer Name: " + customerNames[index]);
+            Console.WriteLine("Account Number: " + accountNumbers[index]);
+            Console.WriteLine("Balance: " + balances[index]);
+        }
+
+     
     }
 }
 
