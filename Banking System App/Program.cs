@@ -173,4 +173,53 @@ namespace Banking_System_App
             Console.WriteLine("New Balance: " + balances[index]);
         }
 
+        // Service 3 - Withdraw Money
+        static void WithdrawMoney()
+        {
+            Console.Write("Enter account number: ");
+            string account = Console.ReadLine();
+
+            int index = accountNumbers.IndexOf(account);
+
+            if (index == -1)
+            {
+                Console.WriteLine("Account not found.");
+                return;
+            }
+
+            Console.Write("Enter withdrawal amount: ");
+
+            double amount;
+
+            try
+            {
+                amount = double.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Invalid amount.");
+                return;
+            }
+
+            if (amount <= 0)
+            {
+                Console.WriteLine("Amount must be positive.");
+                return;
+            }
+
+            if (amount > balances[index])
+            {
+                Console.WriteLine("Insufficient balance.");
+                return;
+            }
+
+            balances[index] -= amount;
+
+            Console.WriteLine("Withdrawal successful.");
+            Console.WriteLine("New Balance: " + balances[index]);
+        }
+
+       
     }
+}
+
