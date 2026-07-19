@@ -292,6 +292,24 @@
 
                         break;
 
+                    //Case 7 - Compare Account Balances
+                    case 7:
+
+                        if (account1.Balance > account2.Balance)
+                        {
+                            Console.WriteLine(account1.HolderName + " has more money.");
+                        }
+                        else if (account2.Balance > account1.Balance)
+                        {
+                            Console.WriteLine(account2.HolderName + " has more money.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Both accounts have equal balance.");
+                        }
+
+                        break;
+
 
 
 
