@@ -67,6 +67,52 @@
             Console.WriteLine("Registration email sent.");
         }
     }
+    // Class 3 - Product
+    class Product
+    {
+        public string ProductName;
+        public double Price;
+        public int StockQuantity;
+
+        // Method - Sell
+        public void Sell(int quantity)
+        {
+            if (StockQuantity >= quantity)
+            {
+                StockQuantity -= quantity;
+            }
+            else
+            {
+                Console.WriteLine("Not enough stock.");
+            }
+
+            LogTransaction();
+        }
+        // Method - Restock
+        public void Restock(int quantity)
+        {
+            StockQuantity += quantity;
+            LogTransaction();
+        }
+        // Method - GetInventoryValue
+        public double GetInventoryValue()
+        {
+            PrintDetails();
+            return Price * StockQuantity;
+        }
+        // Method - PrintDetails
+        private void PrintDetails()
+        {
+            Console.WriteLine("Product: " + ProductName);
+            Console.WriteLine("Price: " + Price);
+            Console.WriteLine("Stock: " + StockQuantity);
+        }
+        // Method - LogTransaction
+        private void LogTransaction()
+        {
+            Console.WriteLine("Transaction logged.");
+        }
+    }
 
 
     internal class Program
