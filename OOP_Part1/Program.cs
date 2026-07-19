@@ -234,6 +234,29 @@
 
                         break;
 
+                    // Case 4 - Make a Withdrawal
+                    case 4:
+
+                        Console.Write("Choose Account (1 or 2): ");
+                        acc = int.Parse(Console.ReadLine());
+
+                        Console.Write("Amount: ");
+                        double withdraw = double.Parse(Console.ReadLine());
+
+                        if (acc == 1)
+                        {
+                            account1.Withdraw(withdraw);
+                            Console.WriteLine("Balance: " + account1.Balance);
+                        }
+                        else
+                        {
+                            account2.Withdraw(withdraw);
+                            Console.WriteLine("Balance: " + account2.Balance);
+                        }
+
+                        break;
+
+
 
 
                 }
