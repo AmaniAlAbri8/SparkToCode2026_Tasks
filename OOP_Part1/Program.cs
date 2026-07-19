@@ -234,7 +234,7 @@
 
                         break;
 
-                    // Case 4 - Make a Withdrawal
+                    //Case 4 - Make a Withdrawal
                     case 4:
 
                         Console.Write("Choose Account (1 or 2): ");
@@ -256,6 +256,23 @@
 
                         break;
 
+                    //Case 5 - View Product Details
+
+                    case 5:
+
+                        Console.Write("Choose Product (1 or 2): ");
+                        int pro = int.Parse(Console.ReadLine());
+
+                        if (pro == 1)
+                        {
+                            Console.WriteLine("Inventory Value: " + product1.GetInventoryValue());
+                        }
+                        else
+                        {
+                            Console.WriteLine("Inventory Value: " + product2.GetInventoryValue());
+                        }
+
+                        break;
 
 
 
