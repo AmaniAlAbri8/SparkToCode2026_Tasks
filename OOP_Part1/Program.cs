@@ -188,6 +188,27 @@
                             account2.CheckBalance();
 
                         break;
+                    //Case 2 - Update Student Address
+                    case 2:
+
+                        Console.Write("Choose Student (1 or 2): ");
+                        int stu = int.Parse(Console.ReadLine());
+
+                        Console.Write("New Address: ");
+                        string address = Console.ReadLine();
+
+                        if (stu == 1)
+                        {
+                            student1.Address = address;
+                            Console.WriteLine("New Address: " + student1.Address);
+                        }
+                        else
+                        {
+                            student2.Address = address;
+                            Console.WriteLine("New Address: " + student2.Address);
+                        }
+
+                        break;
 
 
                 }
