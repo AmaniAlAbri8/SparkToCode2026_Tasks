@@ -344,10 +344,20 @@
 
                         break;
 
+                    //Case 9 - Exit
+                    case 9:
 
+                        Console.WriteLine("Goodbye!");
+                        break;
 
+                    default:
 
-
+                        Console.WriteLine("Invalid choice.");
+                        break;
                 }
             }
+        }
+    }
 }
+
+
