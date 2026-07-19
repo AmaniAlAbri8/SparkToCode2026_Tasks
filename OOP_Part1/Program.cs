@@ -310,6 +310,41 @@
 
                         break;
 
+                    // Case 8 - - Restock Product & Stock Level Check 
+                    case 8:
+
+                        Console.Write("Choose Product (1 or 2): ");
+                        pro = int.Parse(Console.ReadLine());
+
+                        Console.Write("Quantity: ");
+                        int quantity = int.Parse(Console.ReadLine());
+
+                        if (pro == 1)
+                        {
+                            product1.Restock(quantity);
+
+                            if (product1.StockQuantity < 10)
+                                Console.WriteLine("Low");
+                            else if (product1.StockQuantity < 50)
+                                Console.WriteLine("Moderate");
+                            else
+                                Console.WriteLine("Well Stocked");
+                        }
+                        else
+                        {
+                            product2.Restock(quantity);
+
+                            if (product2.StockQuantity < 10)
+                                Console.WriteLine("Low");
+                            else if (product2.StockQuantity < 50)
+                                Console.WriteLine("Moderate");
+                            else
+                                Console.WriteLine("Well Stocked");
+                        }
+
+                        break;
+
+
 
 
 
