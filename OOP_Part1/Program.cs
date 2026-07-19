@@ -210,6 +210,31 @@
 
                         break;
 
+                    //Case 3 - Make a Deposit
+                    case 3:
+
+                        Console.Write("Choose Account (1 or 2): ");
+                        acc = int.Parse(Console.ReadLine());
+
+                        Console.Write("Amount: ");
+                        double deposit = double.Parse(Console.ReadLine());
+
+                        if (acc == 1)
+                        {
+                            account1.Deposit(deposit);
+                            Console.WriteLine(account1.HolderName);
+                            Console.WriteLine("Balance: " + account1.Balance);
+                        }
+                        else
+                        {
+                            account2.Deposit(deposit);
+                            Console.WriteLine(account2.HolderName);
+                            Console.WriteLine("Balance: " + account2.Balance);
+                        }
+
+                        break;
+
+
 
                 }
             }
