@@ -274,6 +274,25 @@
 
                         break;
 
+                    //Case 6 - Register a Student
+                    case 6:
+
+                        Console.Write("Choose Student (1 or 2): ");
+                        stu = int.Parse(Console.ReadLine());
+
+                        Console.Write("Enter Email: ");
+                        string email = Console.ReadLine();
+
+                        if (stu == 1)
+                            student1.Register(email);
+                        else
+                            student2.Register(email);
+
+                        Console.WriteLine("Student registered successfully.");
+
+                        break;
+
+
 
 
                 }
