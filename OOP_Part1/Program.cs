@@ -131,6 +131,18 @@
             account2.HolderName = "Ali";
             account2.Balance = 63;
 
+            //Object 1 -  Student
+            Student student1 = new Student();
+            student1.Name = "Ali";
+            student1.Address = "Muscat";
+            student1.Grade = 65;
+
+            //Object 2 -  Student
+            Student student2 = new Student();
+            student2.Name = "Ahmed";
+            student2.Address = "Muscat";
+            student2.Grade = 70;
+
 
         }
     }
