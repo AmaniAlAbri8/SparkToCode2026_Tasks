@@ -119,7 +119,17 @@
     {
         static void Main(string[] args)
         {
-           
+            //Object 1 -  BankAccount
+            BankAccount account1 = new BankAccount();
+            account1.AccountNumber = 1163;
+            account1.HolderName = "Karim";
+            account1.Balance = 120;
+
+            //Object 2 -  BankAccount
+            BankAccount account2 = new BankAccount();
+            account2.AccountNumber = 15203;
+            account2.HolderName = "Ali";
+            account2.Balance = 63;
 
 
         }
