@@ -155,7 +155,26 @@
             product2.Price = 15.750;
             product2.StockQuantity = 20;
 
+            //Main Menu
+            int choice = 0;
 
+            while (choice != 9)
+            {
+                Console.WriteLine();
+                Console.WriteLine("1. View Account Details");
+                Console.WriteLine("2. Update Student Address");
+                Console.WriteLine("3. Make Deposit");
+                Console.WriteLine("4. Make Withdrawal");
+                Console.WriteLine("5. View Product Details");
+                Console.WriteLine("6. Register Student");
+                Console.WriteLine("7. Compare Account Balances");
+                Console.WriteLine("8. Restock Product");
+                Console.WriteLine("9. Exit");
+
+                Console.Write("Choice: ");
+                choice = int.Parse(Console.ReadLine());
+
+
+            }
         }
-    }
 }
