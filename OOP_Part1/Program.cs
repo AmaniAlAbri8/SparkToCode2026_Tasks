@@ -174,7 +174,22 @@
                 Console.Write("Choice: ");
                 choice = int.Parse(Console.ReadLine());
 
+                switch (choice)
+                {
+                    // Case 1 - View Account Details
+                    case 1:
 
+                        Console.Write("Choose Account (1 or 2): ");
+                        int acc = int.Parse(Console.ReadLine());
+
+                        if (acc == 1)
+                            account1.CheckBalance();
+                        else
+                            account2.CheckBalance();
+
+                        break;
+
+
+                }
             }
-        }
 }
