@@ -44,6 +44,29 @@
             Console.WriteLine("Email notification sent.");
         }
     }
+    // Class 2 - Student
+    class Student
+    {
+        public int Grade;
+        public string Name;
+        public string Address;
+
+        private string email;
+        int age;
+
+        // Method - Register
+        public void Register(string Email)
+        {
+            email = Email;
+            SendEmail();
+        }
+
+        // Method - SendEmail
+        private void SendEmail()
+        {
+            Console.WriteLine("Registration email sent.");
+        }
+    }
 
 
     internal class Program
