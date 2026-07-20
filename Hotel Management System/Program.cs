@@ -234,8 +234,79 @@ namespace Hotel_Management_System
                         break;
 
 
-                    // Case 3 - Book a Room
+                    // Case 3 - Book a Room for a Guest
                     case 3:
+
+
+                        Console.Write("Enter guest ID: ");
+                        string searchGuestId = Console.ReadLine();
+
+
+                        Guest selectedGuest = guests.FirstOrDefault(
+                            g => g.guestId == searchGuestId
+                        );
+
+
+                        if (selectedGuest == null)
+                        {
+                            Console.WriteLine("Guest not found!");
+                            break;
+                        }
+
+
+                        Console.Write("Enter room number: ");
+                        int selectedRoomNumber = int.Parse(Console.ReadLine());
+
+
+                        Room selectedRoom = rooms.FirstOrDefault(
+                            r => r.roomNumber == selectedRoomNumber
+                        );
+
+
+                        if (selectedRoom == null)
+                        {
+                            Console.WriteLine("Room not found!");
+                            break;
+                        }
+
+
+
+                        if (selectedRoom.isAvailable == false)
+                        {
+                            Console.WriteLine("Room is already booked.");
+                            break;
+                        }
+
+
+                        // Update objects directly
+                        selectedGuest.roomNumber = selectedRoomNumber.ToString();
+
+                        selectedRoom.isAvailable = false;
+
+
+
+                        double totalCost = selectedGuest.calculateTotalCost(
+                            selectedRoom.pricePerNight
+                        );
+
+
+
+                        Console.WriteLine("\nBooking Successful!");
+
+                        Console.WriteLine("Guest Name: " + selectedGuest.guestName);
+                        Console.WriteLine("Room Number: " + selectedRoom.roomNumber);
+                        Console.WriteLine("Room Type: " + selectedRoom.roomType);
+                        Console.WriteLine("Price Per Night: OMR "
+                            + selectedRoom.pricePerNight.ToString("0.00"));
+
+                        Console.WriteLine("Total Nights: "
+                            + selectedGuest.totalNights);
+
+                        Console.WriteLine("Total Cost: OMR "
+                            + totalCost.ToString("0.00"));
+
+
+
                         break;
 
 
