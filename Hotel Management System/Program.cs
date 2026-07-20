@@ -966,19 +966,96 @@ namespace Hotel_Management_System
 
                     // Case 10 - Room Type Breakdown Report
                     case 10:
-                        break;
+
+
+                        Console.WriteLine("===== ROOM TYPE BREAKDOWN REPORT =====");
 
 
 
-                    // Exit
-                    case 0:
-                        exitApp = true;
-                        Console.WriteLine("Goodbye!");
-                        break;
+                        string[] roomTypes =
+                        {
+                              "Single",
+                               "Double",
+                                 "Suite"
+                                     };
 
 
-                    default:
-                        Console.WriteLine("Invalid choice!");
+
+                        foreach (string type in roomTypes)
+                        {
+
+
+                            // Count rooms by type using LINQ
+
+                            int numberOfRooms = rooms
+                                .Count(r => r.roomType == type);
+
+
+
+                            Console.WriteLine(
+                                "Room Type: " + type
+                            );
+
+
+                            Console.WriteLine(
+                                "Number of Rooms: "
+                                + numberOfRooms
+                            );
+
+
+
+                            if (numberOfRooms > 0)
+                            {
+
+                                // Average price by type
+
+                                double averageTypePrice =
+                                    rooms
+                                    .Where(r => r.roomType == type)
+                                    .Average(r => r.pricePerNight);
+
+
+
+                                Console.WriteLine(
+                                    "Average Price: OMR "
+                                    + averageTypePrice.ToString("0.00")
+                                );
+
+                            }
+
+                            else
+                            {
+
+                                Console.WriteLine(
+                                    "Average Price: N/A"
+                                );
+
+                            }
+
+
+                        }
+
+
+                        // Overall average price
+
+                        if (rooms.Count() > 0)
+                        {
+
+                            double overallAverage =
+                                rooms.Average(
+                                r => r.pricePerNight
+                                );
+
+
+
+                            Console.WriteLine(
+                                "Overall Average Price: OMR "
+                                + overallAverage.ToString("0.00")
+                            );
+
+                        }
+
+
                         break;
 
                 }
