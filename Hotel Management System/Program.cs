@@ -915,6 +915,52 @@ namespace Hotel_Management_System
 
                     // Case 9 - Guest Lookup by Name
                     case 9:
+
+
+                        Console.Write("Enter guest name to search: ");
+
+                        string searchName = Console.ReadLine();
+
+
+                        List<Guest> matchedGuests = guests
+                            .Where(g => g.guestName
+                            .ToLower()
+                            .Contains(searchName.ToLower()))
+                            .ToList();
+
+
+
+                        Console.WriteLine(
+                            "Number of Matches: "
+                            + matchedGuests.Count()
+                        );
+
+
+
+                        if (matchedGuests.Count() == 0)
+                        {
+                            Console.WriteLine(
+                            "No guests matched that search."
+                            );
+
+                            break;
+                        }
+
+
+
+                        foreach (Guest g in matchedGuests)
+                        {
+
+                            Console.WriteLine(
+                                "ID: " + g.guestId +
+                                " | Name: " + g.guestName +
+                                " | Room: " + g.roomNumber
+                            );
+
+                        }
+
+
+
                         break;
 
 
