@@ -834,11 +834,84 @@ namespace Hotel_Management_System
 
                         break;
 
-
                     // Case 8 - Update Room Price
                     case 8:
-                        break;
 
+
+                        Console.Write("Enter room number: ");
+
+                        int updateRoomNumber =
+                            int.Parse(Console.ReadLine());
+
+
+
+
+                        
+                        Room updateRoom = rooms
+                            .FirstOrDefault(r =>
+                            r.roomNumber == updateRoomNumber);
+
+
+
+
+                        if (updateRoom == null)
+                        {
+                            Console.WriteLine(
+                            "Room not found!"
+                            );
+
+                            break;
+                        }
+
+
+
+                        Console.Write("Enter new price: ");
+
+                        double newPrice =
+                            double.Parse(Console.ReadLine());
+
+
+
+
+                        if (newPrice <= 0)
+                        {
+                            Console.WriteLine(
+                            "Invalid price!"
+                            );
+
+                            break;
+                        }
+
+
+                        double oldPrice = updateRoom.pricePerNight;
+
+
+
+
+                        updateRoom.pricePerNight = newPrice;
+
+
+
+
+                        Console.WriteLine(
+                            "Room price updated successfully!"
+                        );
+
+
+                        Console.WriteLine(
+                            "Old Price: OMR "
+                            + oldPrice.ToString("0.00")
+                        );
+
+
+                        Console.WriteLine(
+                            "New Price: OMR "
+                            + newPrice.ToString("0.00")
+                        );
+
+
+
+                        break;
 
                     // Case 9 - Guest Lookup by Name
                     case 9:
