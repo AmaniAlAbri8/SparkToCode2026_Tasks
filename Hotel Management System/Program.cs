@@ -134,7 +134,56 @@ namespace Hotel_Management_System
 
                     // Case 1 - Add New Room
                     case 1:
+
+                        Console.Write("Enter room number: ");
+                        int roomNumber = int.Parse(Console.ReadLine());
+
+
+                        
+                        bool roomExists = rooms.Any(r => r.roomNumber == roomNumber);
+
+
+                        if (roomExists)
+                        {
+                            Console.WriteLine("Room already exists!");
+                            break;
+                        }
+
+
+                        Console.Write("Enter room type (Single / Double / Suite): ");
+                        string roomType = Console.ReadLine();
+
+
+                        Console.Write("Enter price per night: ");
+                        double price = double.Parse(Console.ReadLine());
+
+
+                        if (price <= 0)
+                        {
+                            Console.WriteLine("Invalid price!");
+                            break;
+                        }
+
+
+
+                        // Create new Room object
+                        Room newRoom = new Room(roomNumber, roomType, price);
+
+
+                        // Add object to rooms list
+                        rooms.Add(newRoom);
+
+
+
+                        Console.WriteLine("Room added successfully!");
+                        Console.WriteLine("Room Number: " + roomNumber);
+                        Console.WriteLine("Type: " + roomType);
+                        Console.WriteLine("Price: OMR " + price.ToString("0.00"));
+                        Console.WriteLine("Total Rooms: " + rooms.Count());
+
+
                         break;
+
 
 
                     // Case 2 - Register New Guest
