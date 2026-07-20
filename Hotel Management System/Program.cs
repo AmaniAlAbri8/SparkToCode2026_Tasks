@@ -188,6 +188,49 @@ namespace Hotel_Management_System
 
                     // Case 2 - Register New Guest
                     case 2:
+
+
+                        Console.Write("Enter guest name: ");
+                        string guestName = Console.ReadLine();
+
+
+                        Console.Write("Enter check-in date: ");
+                        string checkInDate = Console.ReadLine();
+
+
+                        Console.Write("Enter number of nights: ");
+                        int nights = int.Parse(Console.ReadLine());
+
+
+                        if (nights <= 0)
+                        {
+                            Console.WriteLine("Invalid number of nights!");
+                            break;
+                        }
+
+                        
+                        string guestId = "G" + (guests.Count() + 1).ToString("000");
+
+
+                        // Create Guest object
+                        Guest newGuest = new Guest(
+                            guestId,
+                            guestName,
+                            checkInDate,
+                            nights
+                        );
+
+                        // Add guest to list
+                        guests.Add(newGuest);
+
+
+                        Console.WriteLine("\nGuest Registered Successfully!");
+                        Console.WriteLine("Guest ID: " + guestId);
+                        Console.WriteLine("Name: " + guestName);
+                        Console.WriteLine("Check-in Date: " + checkInDate);
+                        Console.WriteLine("Total Nights: " + nights);
+
+
                         break;
 
 
