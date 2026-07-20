@@ -362,12 +362,64 @@ namespace Hotel_Management_System
                         }
 
 
-
                         break;
-
 
                     // Case 5 - View All Guests
                     case 5:
+
+
+                        int totalGuests = guests.Count();
+
+
+
+                        if (totalGuests == 0)
+                        {
+                            Console.WriteLine("No guests have been registered yet.");
+                            break;
+                        }
+
+
+
+                        Console.WriteLine("===== ALL GUESTS =====");
+
+                        Console.WriteLine("Total Guests: " + totalGuests);
+
+
+                        
+                        List<Guest> orderedGuests = guests
+                            .OrderBy(g => g.guestName)
+                            .ToList();
+
+
+                        
+                        var guestDetails = orderedGuests
+                            .Select(g => new
+                            {
+                                ID = g.guestId,
+                                Name = g.guestName,
+                                Room = g.roomNumber,
+                                Date = g.checkInDate,
+                                Nights = g.totalNights
+                            })
+                            .ToList();
+
+
+
+                        foreach (var guest in guestDetails)
+                        {
+
+                            Console.WriteLine(
+                                "ID: " + guest.ID +
+                                " | Name: " + guest.Name +
+                                " | Room: " + guest.Room +
+                                " | Check-In: " + guest.Date +
+                                " | Nights: " + guest.Nights
+                            );
+
+                        }
+
+
+
                         break;
 
 
