@@ -224,7 +224,7 @@ namespace Hotel_Management_System
                         guests.Add(newGuest);
 
 
-                        Console.WriteLine("\nGuest Registered Successfully!");
+                        Console.WriteLine("Guest Registered Successfully!");
                         Console.WriteLine("Guest ID: " + guestId);
                         Console.WriteLine("Name: " + guestName);
                         Console.WriteLine("Check-in Date: " + checkInDate);
@@ -278,7 +278,7 @@ namespace Hotel_Management_System
                         }
 
 
-                        // Update objects directly
+                        
                         selectedGuest.roomNumber = selectedRoomNumber.ToString();
 
                         selectedRoom.isAvailable = false;
@@ -291,7 +291,7 @@ namespace Hotel_Management_System
 
 
 
-                        Console.WriteLine("\nBooking Successful!");
+                        Console.WriteLine("Booking Successful!");
 
                         Console.WriteLine("Guest Name: " + selectedGuest.guestName);
                         Console.WriteLine("Room Number: " + selectedRoom.roomNumber);
@@ -306,12 +306,63 @@ namespace Hotel_Management_System
                             + totalCost.ToString("0.00"));
 
 
-
                         break;
 
 
                     // Case 4 - View All Rooms
                     case 4:
+
+
+                        // Count number of rooms
+                        int totalRooms = rooms.Count();
+
+
+
+                        if (totalRooms == 0)
+                        {
+                            Console.WriteLine("No rooms have been added yet.");
+                            break;
+                        }
+
+
+
+                        Console.WriteLine("===== ALL ROOMS =====");
+
+                        Console.WriteLine("Total Rooms: " + totalRooms);
+
+                        
+                        List<Room> orderedRooms = rooms
+                            .OrderBy(r => r.roomNumber)
+                            .ToList();
+
+
+                      
+                        var roomDetails = orderedRooms
+                            .Select(r => new
+                            {
+                                Number = r.roomNumber,
+                                Type = r.roomType,
+                                Price = r.pricePerNight,
+                                Status = r.isAvailable ? "Available" : "Booked"
+                            })
+                            .ToList();
+
+
+
+                        foreach (var room in roomDetails)
+                        {
+
+                            Console.WriteLine(
+                                "Room Number: " + room.Number +
+                                " | Type: " + room.Type +
+                                " | Price: OMR " + room.Price.ToString("0.00") +
+                                " | Status: " + room.Status
+                            );
+
+                        }
+
+
+
                         break;
 
 
