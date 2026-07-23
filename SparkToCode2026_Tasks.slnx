@@ -1,10 +1,13 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="DatabaseTasks/Airline Information System.drawio.png" />
+  </Folder>
   <Project Path="Banking System App/Banking System App.csproj" Id="9b76e5a9-bc3c-4501-bc10-f8fab772088b" />
   <Project Path="CSharp_Fundamentals_Part1_Tasks(1)/CSharp_Fundamentals_Part1_Tasks(1).csproj" />
   <Project Path="CSharp_Fundamentals_part2_Tasks(2)/CSharp_Fundamentals_part2_Tasks(2).csproj" Id="27c173a3-2925-4911-bf50-fd03d7d69024" />
   <Project Path="CSharp_Fundamentals_part3_Tasks(3)/CSharp_Fundamentals_part3_Tasks(3).csproj" Id="3dd17977-67cd-4ade-bec9-545f1953d377" />
   <Project Path="CSharp_Fundamentals_part4_Tasks(4)/CSharp_Fundamentals_part4_Tasks(4).csproj" Id="506451bc-9604-4018-94c4-fc71dd9a61f3" />
-  <Project Path="CSharp_Fundamentals_part4_Tasks(5)/CSharp_Fundamentals_part5_Tasks(5).csproj" Id="1b8cd225-d19a-4fd2-be35-98ab9cd2d40f" />
+  <Project Path="CSharp_Fundamentals_part5_Tasks(5)/CSharp_Fundamentals_part5_Tasks(5).csproj" />
   <Project Path="Hotel Management System/Hotel Management System.csproj" Id="20ea56c0-0daf-4f7b-83f9-a9d7049da3ba" />
   <Project Path="OOP_Part1/OOP_Part1.csproj" Id="990fba8e-aaed-4402-918b-e4df6037adf5" />
 </Solution>
