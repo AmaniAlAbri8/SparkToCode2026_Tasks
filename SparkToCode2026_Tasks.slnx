@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Solution Items/">
     <File Path="DatabaseTasks/Airline Information System.drawio.png" />
+    <File Path="DatabaseTasks/College Management System.drawio.png" />
   </Folder>
   <Project Path="Banking System App/Banking System App.csproj" Id="9b76e5a9-bc3c-4501-bc10-f8fab772088b" />
   <Project Path="CSharp_Fundamentals_Part1_Tasks(1)/CSharp_Fundamentals_Part1_Tasks(1).csproj" />
